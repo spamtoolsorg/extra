@@ -1,3 +1,6 @@
+<?php
+
+?>
 <html dir="ltr" class="gr__login_microsoftonline_com" lang="en">
 
 <head>
